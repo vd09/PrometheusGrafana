@@ -421,7 +421,7 @@
                     },
                     "editorMode": "code",
                     "expr": "histogram_quantile(0.99, sum(rate(myapp_request_duration_seconds_bucket[1m])) by (le))",
-                    "legendFormat": "P99",
+                    "legendFormat": "P95",
                     "range": true,
                     "refId": "A"
                 },

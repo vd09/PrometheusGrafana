@@ -95,6 +95,7 @@ func main() {
 	dMux.Handle("/devices/", mdh)
 	dMux.Handle("/login", mlh)
 	TestingHistogramQuantile(reg)
+	TestGaugeMetrics(reg)
 
 	pMux := http.NewServeMux()
 	promHandler := promhttp.HandlerFor(reg, promhttp.HandlerOpts{})

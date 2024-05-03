@@ -7,7 +7,7 @@ COPY go.sum ./
 
 RUN go mod download && go mod verify
 
-COPY main.go ./
+COPY *.go ./
 
 RUN go build -o /my-app
 
